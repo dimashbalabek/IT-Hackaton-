@@ -1,51 +1,13 @@
-const sliderImgs = [
-  "img1.png",
-  "img2.png",
-  "img3.png",
-  "img4.png",
-  "img5.png",
-  "img6.png",
-];
-let sliderImage = document.querySelector(".background-image");
-let sliderGrids = [...document.querySelectorAll(".grid-item")];
+// Menu Show
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
 
-let currentImage = 0;
+    if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("show")
+        })
+    }
+}
 
-setInterval(() => {
-  changeSliderImage();
-}, 5000);
-
-const changeSliderImage = () => {
-  sliderGrids.map((gridItem, index) => {
-    setTimeout(() => {
-      gridItem.classList.remove("hide");
-
-      setTimeout(() => {
-        if (index == sliderGrids.length - 1) {
-          if (currentImage >= sliderImgs.length - 1) {
-            currentImage = 0;
-          } else {
-            currentImage++;
-          }
-
-          sliderImage.src = `img/${sliderImgs[currentImage]}`;
-
-          sliderGrids.map((item, i) => {
-            setTimeout(() => {
-              item.classList.add("hide");
-            }, i * 100);
-          });
-        }
-      }, 100);
-    }, index * 100);
-  });
-};
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (scrollY >= 188) {
-    navbar.classList.add("bg");
-  } else {
-    navbar.classList.remove("bg");
-  }
-});
+showMenu("nav-toggle", "nav-menu")

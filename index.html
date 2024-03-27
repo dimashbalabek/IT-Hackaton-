@@ -1,228 +1,395 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lucknow Travel Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <ul class="links-container">
-          <li class="link-item"><a href="#travel">Travel</a></li>
-          <li class="link-item"><a href="#explore-section">Explore</a></li>
-          <li class="link-item">
-            <a href="#hero-section"
-              ><img
-                src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/logo.png?raw=true"
-                class="logo"
-                alt=""
-            /></a>
-          </li>
-          <li class="link-item"><a href="#services">Services</a></li>
-          <li class="link-item"><a href="#booknow">Book Now</a></li>
-        </ul>
-      </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./img/moon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div class="nav_led">
+                <div>
+                    <a href="#" class="nav__logo">Dimash Balabek</a>
+                </div>
+    
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>                
+                </div>
+    
+                <div class="nav__toggle" id="nav-toggle">
+                    <img src="./img/menu toggle icon.png" class="menu__icon" alt="">
+                </div>
+            </div>
+            <img src="./img/moon.png" class="moon"  onclick="swap()" alt="">
+            <img src="./img/sun.png"  class="sun" onclick="swap()" alt="">
+        </nav>
     </header>
-    <main class="hero-section" id="hero-section">
-      <div class="hero-section-content" data-aos="fade-up">
-        <h1 class="hero-section-title">wonderful experience</h1>
-        <p class="hero-section-sub-heading">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
+    <main class="l-main">
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <h1 class="home__title">HE <br> LLO</h1>
 
-      <!-- scroll down img -->
-      <img
-        src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/down%20arrow.png?raw=true"
-        class="scroll-down-icon"
-        alt="scroll down indicator"
-      />
-      <div class="background">
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img1.png?raw=true"
-          class="background-image"
-          alt="hero-section image"
-        />
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-link">SCROLL DOWN<i class="bx bx-up-arrow-alt"></i></a>
+                </div>
+                <img src="./img/perfil.png" alt="">
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
 
-        <!-- grid -->
-        <div class="grid-slider">
-          <div class="grid-item hide"></div>
-          <div class="grid-item hide"></div>
-          <div class="grid-item hide"></div>
-          <div class="grid-item hide"></div>
-          <div class="grid-item hide"></div>
-          <div class="grid-item hide"></div>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="./img/perfil.png" alt="">
+                </div>
+
+                <div>
+                    <div>
+                        <h2 class="about__subtitle">I'm Dimash Balabek</h2>
+                        <span class="about__profession">Mobile Developer</span>
+                        <p>I am a Person who is interested in IT Mobile, so I would like to try it.</p>
+                    </div>
+    
+                    <div class="about__social">
+                        <a href="#" class="about__social-icon"><img src="./img/github-logo-24.png" alt=""></a>
+                        <a href="#" class="about__social-icon"><img src="./img/bxl-android.svg" alt=""></a>
+                        <a href="#" class="about__social-icon"><img src="./img/dribbble-logo-24.png" alt=""></a>
+                    </div>
+                </div>
+                
+                
+                
+            
+            </div>
+            <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/yu_x8qv6mfA?si=nHY9JQHLx90GQhl3" title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <!-- Skills -->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Development</h3>
+                    <span class="skills__name">Html</span>
+                    <span class="skills__name">CSS</span>
+                    <span class="skills__name">JavaScript</span>
+                    <span class="skills__name">Python</span>
+                    <span class="skills__name">Dart</span>
+                    <span class="skills__name">Flutter</span>
+
+                    <h3 class="skills__subtitle">Design</h3>
+                    <span class="skills__name">Figma</span>
+                    <span class="skills__name">Adobe Photoshop</span>
+                    <span class="skills__name">Adobe Illustrator</span>
+                </div>
+            </div>
+        </section>
+<!-- PORTFOLIO -->
+<section class="portfolio section" id="portfolio">
+     <h2 class="section-title">Portfolio Projects</h2> 
+          <div class="portfolio__container bd-grid">
+            <!-- <div class="portfolio__nav"> -->
+                <!-- <a class="prev" onclick="plusSlides(-1)">❮</a> -->
+                <!-- <a class="next" onclick="plusSlides(1)">❯</a> -->
+            <!-- </div> -->
+ 
+            <div class="portfolio__img"> 
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <img src="./img/image1.png" class="gallery_img"  alt=""> 
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div class="portfolio__link"> 
+                    <a href="#" class="portfolio__link-name">View details</a>
+                     
+                </div> 
+            </div> 
+            <div class="portfolio__img"> 
+                <div style="display: flex;justify-content: center; align-items: center;"">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <img src="./img/image2.png" class="gallery_img" alt=""> 
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div class="portfolio__link"> 
+                    <a href="#" class="portfolio__link-name">View details</a> 
+                </div> 
+            </div> 
+
+            <div class="portfolio__img"> 
+                <div style="display: flex;justify-content: center; align-items: center;"">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <img src="./img/image3.png"class="gallery_img"  alt=""> 
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div class="portfolio__link"> 
+                    <a href="#" class="portfolio__link-name">View details</a> 
+                </div> 
+            </div> 
+
+            <div class="portfolio__img"> 
+                <div style="display: flex;justify-content: center; align-items: center;"">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <img src="./img/image4.png" class="gallery_img" alt=""> 
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div class="portfolio__link"> 
+                    <a href="#" class="portfolio__link-name">View details</a> 
+                </div> 
+            </div> 
+
+            <div class="portfolio__img"> 
+                <div style="display: flex;justify-content: center; align-items: center;"">
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <img src="./img/image5.png" class="gallery_img" alt=""> 
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <div class="portfolio__link"> 
+                    <a href="#" class="portfolio__link-name">View details</a> 
+                </div> 
+            </div> 
+
+
+</section>
+<!-- FeedBack -->
+<section class="sectionf" id="feedback">
+    <h2 class="section-title">FeedBack</h2>
+
+    <div class="feedback__container">
+        <div class="feedback__main_nav">
+            <div class="feedback__block_nav-container">
+                <div class="feedback__block_nav-block feedback__active" onclick="user(1)">
+                    <img src="./img/imageuser3.png" alt="" class="feedback__img">
+                    <span class="feedback__username">Thomas Smith</span>
+                </div>
+    
+                <div class="feedback__block_nav-block feedback__active" onclick="user(2)">
+                    <img src="./img/imageuser1.png" alt="" class="feedback__img">
+                    <span class="feedback__username">Kate Anderson</span>
+                </div>
+    
+                <div class="feedback__block_nav-block feedback__active" onclick="user(3)">
+                    <img src="./img/imageuser2.png" alt="" class="feedback__img">
+                    <span class="feedback__username">Maria Ivanovna</span>
+                </div>
+    
+                <div class="feedback__block_nav-block feedback__active" onclick="user(4)">
+                    <img src="./img/imageuser4.png" alt="" class="feedback__img">
+                    <span class="feedback__username" >Matthew John</span>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="feedback__bottom-container">
+            <div class="feedback__bottom-user_title">
+                <img src="./img/imageuser3.png" class="feedback__bottom-img" alt="">
+                <span class="feedback__bottom-username">Thomas Smith</span>
+            </div>
+            <p>Your strategic approach to the marketing campaign was impressive. Your clear understanding of the target audience and your innovative ideas for reaching them effectively contributed significantly to the success of the project. Additionally, your ability to adapt and refine strategies based on feedback throughout the campaign was commendable and resulted in achieving our objectives ahead of schedule.</p>
+        </div>
+
+        <div class="feedback__bottom-container">
+            <div class="feedback__bottom-user_title">
+                <img src="./img/imageuser1.png" class="feedback__bottom-img" alt="">
+                <span class="feedback__bottom-username">Kate Anderson</span>
+            </div>
+            <p>Your presentation skills during the quarterly sales review were exceptional. Your ability to convey complex information in a clear and engaging manner kept the audience attentive and facilitated a thorough understanding of the sales performance. Incorporating visual aids effectively supported your key points, making the presentation both informative and visually appealing.</p>
+        </div>
+
+        <div class="feedback__bottom-container">
+            <div class="feedback__bottom-user_title">
+                <img src="./img/imageuser2.png" class="feedback__bottom-img" alt="">
+                <span class="feedback__bottom-username">Maria Ivanovna</span>
+            </div>
+            <p>our collaborative efforts within the cross-functional team were exemplary. Your willingness to listen to diverse perspectives, contribute valuable insights, and foster a supportive environment greatly enhanced team cohesion and productivity. Your adeptness at resolving conflicts constructively ensured that the project progressed smoothly, demonstrating strong leadership and interpersonal skills.</p>
+        </div>
+
+        <div class="feedback__bottom-container">
+            <div class="feedback__bottom-user_title">
+                <img src="./img/imageuser4.png" class="feedback__bottom-img" alt="">
+                <span class="feedback__bottom-username">Matthew John</span>
+            </div>
+            <p>Your strategic approach to the marketing campaign was impressive. Your clear understanding of the target audience and your innovative ideas for reaching them effectively contributed significantly to the success of the project. Additionally, your ability to adapt and refine strategies based on feedback throughout the campaign was commendable and resulted in achieving our objectives ahead of schedule.</p>
+        </div>
+
+        
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact__container bd-grid">
+        <div class="contact__info">
+            <h3 class="contact__subtitle">EMAIL</h3>
+            <span class="contact__text">dimashbalabek0@gmail.com</span>
+
+            <h3 class="contact__subtitle">PHONE</h3>
+            <span class="contact__text">+20 999</span>
+            
+            <h3 class="contact__subtitle">ADRESS</h3>
+            <span class="contact__text">Pushkina 154 JIHC</span>
+        </div>
+
+        <form action="https://formspree.io/f/xaygzwdn" method="POST">
+            <div class="contact__inputs">
+                <input type="text" name="Name" placeholder="Name" id="" class="contact__input">
+                <input type="mail" name="Email" placeholder="Your email" id="" class="contact__input">
+
+                <textarea name="" id="" cols="30" rows="10" class="contact__input"></textarea>
+
+                <input type="submit" value="Envair" name="" id="" class="contact__button">
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer section">
+    <div class="footer__container bd-grid">
+        <div class="footer__data-1">
+            <h2 class="footer__title">Dimash Balabek</h2>
+            <p class="footer__subtitle">I'm Dimash Balabek and this is my personal website portfolio</p>
+            <h2 class="footer__title">Explore</h2>
+            <ul>
+                <li><a href="#home" class="footer__link">Home</a></li>
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#skills" class="footer__link">Skills</a></li>
+                <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__data">
+            <h2>Follow Me</h2>
+            <div class="footer__icon-container">
+                <a href="#" class="footer__social"> <img src="./img/bxl-facebook-circle.svg" alt=""></a>
+                <a href="#" class="footer__social"> <img src="./img/bxl-whatsapp.svg" alt=""></a>
+                <a href="#" class="footer__social"> <img src="./img/bxl-tiktok.svg" alt=""></a>
+            </div>
+        
+        </div>
+    </div>
+</footer>
     </main>
-    <section class="explore-section" id="explore-section">
-      <h1 class="section-title" data-aos="fade-up">Explore the world</h1>
-      <p class="section-para" data-aos="fade-up">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum sem
-        augue, vitae bibendum nibh tempor nec. Aenean quis commodo lectus, in
-        rhoncus lorem
-      </p>
 
-      <!-- grid -->
+    <script>
+        // mode swap
+        // mav toggle
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggle = document.getElementById("nav-toggle");
+            const nav = document.getElementById("nav-menu");
 
-      <div class="tours-container">
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/australia.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">Australia</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
+            if (toggle && nav) {
+                toggle.addEventListener("click", () => {
+                    nav.classList.toggle("show");
+                });
+            }
+        });
 
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/maldives.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">Maldives</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
+                // remove MENU MOBILE
+                const navLink = document.querySelectorAll(".nav__link")
 
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/paris.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">Paris</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
+function linkAction() {
+    const navMenu = document.getElementById("nav-menu")
+    navMenu.classList.remove("show")
+}
+navLink.forEach(n => n.addEventListener("click", linkAction))
 
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/dubai.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">Dubai</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
+// gallery
 
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/india.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">India</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
+let slideIndex = 1;
+showSlides(slideIndex);
 
-        <div class="tour-card" data-aos="fade-up">
-          <img src="img/italy.png" class="tour-img" alt="tour-image" />
-          <div class="tour-body">
-            <h3 class="tour-name">Italy</h3>
-            <p class="tour-action">View city</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="services-section" id="services">
-      <h1 class="section-title" data-aos="fade-up">Why Us ?</h1>
-      <p class="section-para" data-aos="fade-up">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-      <!-- services grid -->
-      <div class="serives-grid">
-        <div class="service-card" data-aos="fade-up">
-          <div class="circle"></div>
-          <i class="fa-solid fa-earth-americas card-icon"></i>
-          <p class="service-text">We are based all over the world</p>
-        </div>
-        <div class="service-card" data-aos="fade-up">
-          <div class="circle"></div>
-          <i class="fa-solid fa-coins card-icon"></i>
-          <p class="service-text">Travel the World,Without thinking</p>
-        </div>
-        <div class="service-card" data-aos="fade-up">
-          <div class="circle"></div>
-          <i class="fa-solid fa-book-open card-icon"></i>
-          <p class="service-text">Get to know about local cultures</p>
-        </div>
-        <div class="service-card" data-aos="fade-up">
-          <div class="circle"></div>
-          <i class="fa-solid fa-person-snowboarding card-icon"></i>
-          <p class="service-text">Have you best experience</p>
-        </div>
-      </div>
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("portfolio__img");
+  if (n > slides.length) {slideIndex = 1}
 
-      <div class="bg-circle"></div>
+  if (n < 1) {slideIndex = slides.length} 
 
-      <div class="travel-grid" id="travel">
-        <img src="img/img1.png" data-aos="fade-up" alt="" />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img2.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img3.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img4.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img5.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/img6.png?raw=trueZz"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img src="img/australia.png" data-aos="fade-up" alt="" />
-        <img src="img/dubai.png" data-aos="fade-up" alt="" />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/maldives.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />Z
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/paris.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/india.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-        <img
-          src="https://github.com/kunaal438/travel-one-page-website/blob/master/Img/italy.png?raw=true"
-          data-aos="fade-up"
-          alt=""
-        />
-      </div>
-    </section>
-    <section class="book-section" id="booknow">
-      <div class="book-content" data-aos="fade-up">
-        <h1 class="book-now-title">Book your travel today</h1>
-        <p class="book-now-text">
-          Give yourself and your family a peacfull and wonderful vacation this
-          holiday
-        </p>
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+}
 
-        <button class="book-now">book now</button>
-      </div>
-      <div class="bg-circle-2"></div>
-      <img src="img/book.png" data-aos="fade-up" class="book-now-img" alt="" />
-    </section>
+function swap() {
+    const moon = document.querySelector(".moon");
+    const sun = document.querySelector(".sun");
+    const section = document.querySelector(".section");
 
-    <!-- footer -->
-    <footer class="footer">
-      <img src="img/logo.png" class="footer-logo" alt="" />
-      <div class="footer-text">
-        <p>Travel the world, on this holiday</p>
-        <p>Email - support@travel.com</p>
-        <p>Phone - 99 88 776655, 99 88 776644</p>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    if (moon.style.display === "none") {
+        moon.style.display = "block";
+        sun.style.display = "none";
+        // change
+        section.style.backgroundColor = "var(--white-color)";
+        document.body.style.backgroundColor = "white";
+        // Получаем все элементы h2 на странице
+        const headings = document.querySelectorAll(".section-title");
+        // Проходимся по каждому элементу и меняем цвет текста
+        headings.forEach((heading) => {
+            heading.style.color = "var(--dark-color)";
+        });
+
+    } else {
+        moon.style.display = "none";
+        sun.style.display = "block";
+        section.style.backgroundColor = "var(--dark-color)";
+        document.body.style.backgroundColor = "var(--dark-color)";
+        const headings = document.querySelectorAll(".section-title");
+        // Тоже самое
+        headings.forEach((heading) => {
+            heading.style.color = "white";
+        });
+    }
+}
+// feedback function 1
+let feedbacknum = 1;
+    user();
+
+    function user(num) {
+        let i = 0
+        let feedbackBoxes = document.getElementsByClassName("feedback__bottom-container");
+        let active = document.getElementsByClassName("feedback__active");
+        
+
+        for (let i = 0;  i < feedbackBoxes.length; i++) {
+            feedbackBoxes[i].style.display = "none";
+            active[i].style.backgroundColor = "#5361ff"
+        }
+        if (num >= 1){
+            feedbackBoxes[num-1].style.display = "block";
+            active[num -1].style.backgroundColor = "#444fc9"
+        } else{
+            feedbackBoxes[feedbacknum-1].style.display = "block";
+            active[feedbackBoxes -1].style.backgroundColor = "#444fc9"
+        }
+    }
+
+    
+
+
+    </script>
+</body>
 </html>
