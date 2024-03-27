@@ -1,0 +1,11 @@
+.dark {
+  background-color: black;
+  color: white;
+  border-radius: 100px; /* Общий стиль для обоих режимов */
+}
+
+.sun {
+  background-color: white;
+  color: black;
+  border-radius: 100px; /* Общий стиль для обоих режимов */
+}
