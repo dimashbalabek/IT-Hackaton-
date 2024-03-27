@@ -12,54 +12,63 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="../style.css">
 
       <title>Responsive travel website - Bedimcode</title>
    </head>
    <body>
       <!--==================== HEADER ====================-->
-      <header class="l-header">
-         <nav class="nav bd-grid">
-             <div class="nav_led">
-                 <div class="city__name">
-                     <a href="#" class="nav__logo">Dimash Balabek</a>
-                 </div>
-     
-                 <div class="nav__menu" id="nav-menu">
-                     <ul class="nav__list">
-                         <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                     </ul>                
-                 </div>
-     
-                 <div class="nav__toggle" id="nav-toggle">
-                     <img src="./img/menu toggle icon.png" class="menu__icon" alt="">
-                 </div>
-             </div>
-             <img src="./img/moon.png" class="moon"  onclick="swap()" alt="">
-             <img src="./img/sun.png"  class="sun" onclick="swap()" alt="">
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">Taraz</a>
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link">About</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#popular" class="nav__link">Popular</a>
+                  </li>
+
+                  <li class="nav__item">
+                     <a href="#explore" class="nav__link">Explore</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
          </nav>
-     </header>
+      </header>
 
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            <img src="assets/img/home-bg.jpg" alt="home image" class="home__bg">
+            <img src="assets/img/Sofosbuvir-Taraz.jpg" alt="home image" class="home__bg">
             <div class="home__shadow"></div>
 
             <div class="home__container container grid">
                <div class="home__data">
                   <h3 class="home__subtitle">
-                     Welcome To Travel
+                     Welcome To Taraz  Jambyl City
                   </h3>
 
                   <h1 class="home__title">
                      Explore <br>
-                     The World
+                     The Kazakhstan
                   </h1>
 
                   <p class="home__description">

@@ -236,6 +236,8 @@ img {
 }
 
 .home__bg {
+  background-color: black;
+  opacity: 50%;
   position: absolute;
   top: 0;
   left: 0;
@@ -782,7 +784,8 @@ img {
   }
 
   .button {
-    column-gap: 1.5rem;
+    text-align: center;
+    border-radius: 3rem;
   }
 
   .about__container {
