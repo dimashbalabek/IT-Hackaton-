@@ -20,28 +20,8 @@ if(navClose){
 }
 
 
-/*=============== light&dark mode ===============*/
-function swap() {
-    const moon = document.querySelector(".moon");
-    const sun = document.querySelector(".sun");
-    const section = document.querySelector(".body");
-
-    if (moon.style.display === "none") {
-        moon.style.display = "block";
-        sun.style.display = "none";
-        // change
-        section.style.backgroundColor = "white";
-        document.body.style.backgroundColor = "white";
-        // Получаем все элементы h2 на странице
 
 
-    } else {
-        moon.style.display = "none";
-        sun.style.display = "block";
-        section.style.backgroundColor = "black";
-        document.body.style.backgroundColor = "black";
-    }
-}
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -105,3 +85,64 @@ sr.reveal(`.home__card`, {delay: 600, distance: '100px', interval: 100})
 sr.reveal(`.about__data, .join__image`, {origin: 'right'})
 sr.reveal(`.about__image, .join__data`, {origin: 'left'})
 sr.reveal(`.popular__card`, {interval: 200})
+
+/*===== DARK LIGHT TOGGLE =====*/
+let index = 0;
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+    if (index == 1){
+        document.body.classList.toggle('dark');
+        document.body.style.backgroundColor = "black"; // Изменено на черный цвет заднего фона для темной темы
+        const shadow_png = document.querySelector(".explore__shadow");
+        const shadow2_png = document.querySelector(".home__shadow");
+
+        // Change color of headings, paragraphs, and links to white for dark mode
+        const headings = document.querySelectorAll('h1, h2, h3');
+        const paragraphs = document.querySelectorAll('p');
+        const links = document.querySelectorAll('a');
+        
+        headings.forEach((heading) => {
+            heading.style.color = 'white';
+        });
+    
+        paragraphs.forEach((paragraph) => {
+            paragraph.style.color = 'white';
+        });
+    
+        links.forEach((link) => {
+            link.style.color = 'white';
+        });
+    
+        shadow_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%)";
+        shadow2_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%)";
+
+        index = 0; // Изменение индекса для обозначения активной темы
+    } else {
+        document.body.classList.toggle('dark');
+        document.body.style.backgroundColor = "white";
+        const shadow_png = document.querySelector(".explore__shadow");
+        const shadow2_png = document.querySelector(".home__shadow");
+    
+        // Change color of headings, paragraphs, and links to black for light mode
+        const headings = document.querySelectorAll('h1, h2, h3');
+        const paragraphs = document.querySelectorAll('p');
+        const links = document.querySelectorAll('a');
+        
+        headings.forEach((heading) => {
+            heading.style.color = 'black';
+        });
+    
+        paragraphs.forEach((paragraph) => {
+            paragraph.style.color = 'black';
+        });
+    
+        links.forEach((link) => {
+            link.style.color = 'black';
+        });
+    
+        shadow_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 100%) 5%, hsla(0, 0%, 100%, 0) 40%, hsla(0, 0%, 100%, 0) 60%, hsl(0, 0%, 100%) 92%)";
+        shadow2_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 100%) 5%, hsla(0, 0%, 100%, 0) 40%, hsla(0, 0%, 100%, 0) 60%, hsl(0, 0%, 100%) 92%)";
+        index = 1; // Сброс индекса для обозначения активной темы
+    }
+});
