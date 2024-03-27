@@ -19,6 +19,29 @@ if(navClose){
     })
 }
 
+
+/*=============== light&dark mode ===============*/
+function swap() {
+    const moon = document.querySelector(".moon");
+    const sun = document.querySelector(".sun");
+    const section = document.querySelector(".body");
+
+    if (moon.style.display === "none") {
+        moon.style.display = "block";
+        sun.style.display = "none";
+        // change
+        section.style.backgroundColor = "white";
+        document.body.style.backgroundColor = "white";
+        // Получаем все элементы h2 на странице
+
+
+    } else {
+        moon.style.display = "none";
+        sun.style.display = "block";
+        section.style.backgroundColor = "black";
+        document.body.style.backgroundColor = "black";
+    }
+}
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
