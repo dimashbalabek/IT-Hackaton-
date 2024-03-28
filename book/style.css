@@ -17,6 +17,7 @@ body {
 }
 
 .container {
+  justify-content: center;
   transition: opacity 1s ease;
   width: 100%;
   display: flex;
