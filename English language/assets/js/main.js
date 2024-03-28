@@ -205,3 +205,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+
+/*===== FEEDBACK =====*/
+let feedbacknum = 1;
+    user();
+
+    function user(num) {
+        let i = 0
+        let feedbackBoxes = document.getElementsByClassName("feedback__bottom-container");
+        let active = document.getElementsByClassName("feedback__active");
+        
+
+        for (let i = 0;  i < feedbackBoxes.length; i++) {
+            feedbackBoxes[i].style.display = "none";
+            active[i].style.backgroundColor = "#787878"
+        }
+        if (num >= 1){
+            feedbackBoxes[num-1].style.display = "block";
+            active[num -1].style.backgroundColor = "#434343"
+        } else{
+            feedbackBoxes[feedbacknum-1].style.display = "block";
+            active[feedbackBoxes -1].style.backgroundColor = "#434343"
+        }
+    }
