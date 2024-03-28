@@ -5,19 +5,26 @@ const navMenu = document.getElementById('nav-menu'),
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
+calc = 0
 if(navToggle){
     navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+        if(calc == 0){
+            navMenu.classList.add('show-menu')
+            calc = 1
+        } else{
+            navMenu.classList.remove('show-menu')
+            calc = 0
+        }
     })
 }
 
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+// if(navClose){
+//     navClose.addEventListener('click', () =>{
+//         navMenu.classList.remove('show-menu')
+//     })
+// }
 
 
 
@@ -91,7 +98,8 @@ let index = 0;
 const chk = document.getElementById('chk');
 
 chk.addEventListener('change', () => {
-    if (index == 1){
+    const footer = document.querySelector('footer');
+    if (index == 1) {
         document.body.classList.toggle('dark');
         document.body.style.backgroundColor = "black"; // Изменено на черный цвет заднего фона для темной темы
         const shadow_png = document.querySelector(".explore__shadow");
@@ -101,19 +109,22 @@ chk.addEventListener('change', () => {
         const headings = document.querySelectorAll('h1, h2, h3');
         const paragraphs = document.querySelectorAll('p');
         const links = document.querySelectorAll('a');
-        
+
         headings.forEach((heading) => {
             heading.style.color = 'white';
         });
-    
+
         paragraphs.forEach((paragraph) => {
             paragraph.style.color = 'white';
         });
-    
+
         links.forEach((link) => {
             link.style.color = 'white';
         });
-    
+
+        // Change color of footer elements to white for dark mode
+        footer.style.backgroundColor = 'var(--container-color)';
+
         shadow_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%)";
         shadow2_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 0%) 5%, hsla(0, 0%, 0%, 0) 40%, hsla(0, 0%, 0%, 0) 60%, hsl(0, 0%, 0%) 92%)";
 
@@ -123,38 +134,38 @@ chk.addEventListener('change', () => {
         document.body.style.backgroundColor = "white";
         const shadow_png = document.querySelector(".explore__shadow");
         const shadow2_png = document.querySelector(".home__shadow");
-    
+
         // Change color of headings, paragraphs, and links to black for light mode
-        const headings = document.querySelectorAll('h1, h2, h3, a');
+        const headings = document.querySelectorAll('h1, h2, h3, .popular__title');
         const paragraphs = document.querySelectorAll('p');
         const links = document.querySelectorAll('a');
-        
+
         headings.forEach((heading) => {
             heading.style.color = 'black';
         });
-    
+
         paragraphs.forEach((paragraph) => {
             paragraph.style.color = 'black';
         });
-    
+
         links.forEach((link) => {
             link.style.color = 'black';
         });
-    
+
+        // Change color of footer elements to black for light mode
+        footer.style.backgroundColor = '#C3C3C3';
+
         shadow_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 100%) 5%, hsla(0, 0%, 100%, 0) 40%, hsla(0, 0%, 100%, 0) 60%, hsl(0, 0%, 100%) 92%)";
         shadow2_png.style.background = "linear-gradient(180deg, hsl(0, 0%, 100%) 5%, hsla(0, 0%, 100%, 0) 40%, hsla(0, 0%, 100%, 0) 60%, hsl(0, 0%, 100%) 92%)";
+
         index = 1; // Сброс индекса для обозначения активной темы
     }
 });
 
+
 /*===== LANGUAGE SWAP =====*/
 
 document.addEventListener('DOMContentLoaded', () => {
-	/*
-		1. по клику на пункты верхнего меню открывать дропдаун
-		2. по клику (повторному) на эти пункты - закрывать дропдаун
-		3. по клику в любое место сайта, кроме меню - закрывать дропдаун
-	*/
 
 	const menuBtns = document.querySelectorAll('.menu__btn');
 	const drops = document.querySelectorAll('.dropdown');
@@ -193,3 +204,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 });
+
